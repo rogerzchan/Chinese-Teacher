@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casual Chinese Conversations</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --faint: #9a9a9a;
+    --rule: #e3e0d8;
+    --paper: #fdfcf9;
+    --accent: #b4401f;
+    --note-bg: #f6f3ec;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 24px 80px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Charter", "Georgia", serif;
+    line-height: 1.6;
+  }
+
+  .sheet { max-width: 720px; margin: 0 auto; }
+
+  /* ---------- masthead ---------- */
+  header.masthead {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+  }
+  header.masthead h1 {
+    font-size: 30px;
+    margin: 0 0 6px;
+    letter-spacing: -0.4px;
+  }
+  header.masthead p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .howto {
+    font-size: 14px;
+    color: var(--muted);
+    background: var(--note-bg);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 22px 0 28px;
+  }
+  .howto b { color: var(--ink); }
+  .howto ul { margin: 8px 0 0; padding-left: 18px; }
+  .howto li { margin: 4px 0; }
+
+  /* ---------- controls ---------- */
+  .controls {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 36px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .controls button {
+    font: inherit;
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .controls button.on { background: var(--ink); color: var(--paper); }
+  .controls button:hover { opacity: 0.75; }
+
+  /* ---------- story ---------- */
+  .story { margin-bottom: 56px; }
+
+  .story-head {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+    margin-bottom: 6px;
+  }
+  .story-num {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+  }
+  .story-head h2 {
+    font-size: 24px;
+    margin: 4px 0 2px;
+  }
+  .story-head h2 .pin {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: normal;
+    margin-left: 8px;
+  }
+  .story-head .en-title {
+    font-size: 15px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .scene {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 12px 0 22px;
+    padding-left: 12px;
+    border-left: 3px solid var(--rule);
+  }
+
+  /* ---------- dialogue ---------- */
+  .line {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+    align-items: start;
+  }
+  .who {
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--faint);
+    padding-top: 9px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .zh {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 25px;
+    line-height: 2.05;
+  }
+  ruby { ruby-position: over; margin: 0 1px; }
+  rt {
+    font-family: "Charter", Georgia, serif;
+    font-size: 11.5px;
+    color: var(--accent);
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    padding-bottom: 2px;
+  }
+  .en {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* toggles */
+  body.no-pinyin rt { visibility: hidden; }
+  body.no-en .en { display: none; }
+
+  /* ---------- notes ---------- */
+  .notes {
+    background: var(--note-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 26px;
+  }
+  .notes h3 {
+    font-family: system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .notes dl { margin: 0; }
+  .notes dt {
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  .notes dt:first-child { margin-top: 0; }
+  .notes dt .np {
+    font-family: Charter, Georgia, serif;
+    font-size: 13px;
+    color: var(--accent);
+    margin-left: 7px;
+  }
+  .notes dd {
+    margin: 1px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  /* ---------- parts + contents ---------- */
+  .contents { margin: 0 0 36px; font-size: 15px; }
+  .contents a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .contents a:hover { border-color: var(--ink); }
+  .contents ol { margin: 6px 0 0; padding-left: 0; list-style: none; }
+  .contents li { margin: 6px 0; }
+  .contents .count { color: var(--faint); font-size: 13px; margin-left: 6px; }
+  .part-head { margin: 64px 0 36px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); scroll-margin-top: 70px; }
+  .part-head:first-child { margin-top: 0; }
+  .part-head .part-num { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .part-head h2 { font-size: 28px; margin: 4px 0 4px; }
+  .part-head p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* ---------- print ---------- */
+  @media print {
+    body { background: #fff; padding: 0; font-size: 12pt; }
+    .controls, .howto, .contents { display: none !important; }
+    .story { page-break-after: always; margin-bottom: 0; }
+    .story:last-of-type { page-break-after: auto; }
+    .line { page-break-inside: avoid; }
+    .notes { background: #f2f2f2; page-break-inside: avoid; }
+    .zh { font-size: 21px; line-height: 2.0; }
+    rt { color: #555; }
+    header.masthead { margin-bottom: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<header class="masthead">
+  <h1>Casual Chinese Conversations</h1>
+  <p>How people actually talk. Not textbook Chinese.</p>
+</header>
+
+<div class="howto">
+  <b>How to use this:</b>
+  <ul>
+    <li>Read one story a day, out loud, twice.</li>
+    <li>First pass with pinyin. Second pass tap <b>Pinyin</b> to turn it off and see what sticks.</li>
+    <li>Have your mom read the other person's lines so you're actually responding to someone.</li>
+    <li>The box at the bottom of each story is the stuff that won't be in a textbook. Memorize those whole, don't break them down.</li>
+    <li><b>Print</b> lays it out one story per page. Tap a part below to jump to it.</li>
+  </ul>
+</div>
+
+<div class="controls">
+  <button id="btn-pinyin" class="on">Pinyin: on</button>
+  <button id="btn-en" class="on">English: on</button>
+  <button id="btn-print">Print</button>
+</div>
+
+<main id="out"></main>
+
+<script src="stories.js"></script>
+<script>
+/* ---------- render ---------- */
+function ruby(spec) {
+  return spec.split("/").map(tok => {
+    const i = tok.indexOf("|");
+    const zh = i === -1 ? tok : tok.slice(0, i);
+    const py = i === -1 ? "" : tok.slice(i + 1);
+    if (!py) return `<span>${zh}</span>`;
+    return `<ruby>${zh}<rt>${py}</rt></ruby>`;
+  }).join("");
+}
+
+function story(s, n) {
+  return `
+  <section class="story">
+    <div class="story-head">
+      <div class="story-num">Story ${n}</div>
+      <h2>${s.t}<span class="pin">${s.tp}</span></h2>
+      <div class="en-title">${s.te}</div>
+    </div>
+    <p class="scene">${s.scene}</p>
+    ${s.lines.map(([who, spec, en]) => `
+      <div class="line">
+        <div class="who">${who}</div>
+        <div>
+          <div class="zh">${ruby(spec)}</div>
+          <div class="en">${en}</div>
+        </div>
+      </div>`).join("")}
+    <div class="notes">
+      <h3>Stuff a textbook won't tell you</h3>
+      <dl>
+        ${s.notes.map(([w, p, d]) =>
+          `<dt>${w}${p ? `<span class="np">${p}</span>` : ""}</dt><dd>${d}</dd>`
+        ).join("")}
+      </dl>
+    </div>
+  </section>`;
+}
+
+let n = 0;
+const contents = `
+  <nav class="contents"><ol>
+    ${PARTS.map((p, i) => `<li><a href="#part-${i + 1}">Part ${i + 1}: ${p.title}</a><span class="count">${p.stories.length} stories</span></li>`).join("")}
+  </ol></nav>`;
+
+document.getElementById("out").innerHTML = contents + PARTS.map((p, i) => `
+  <div class="part-head" id="part-${i + 1}">
+    <div class="part-num">Part ${i + 1}</div>
+    <h2>${p.title}</h2>
+    <p>${p.sub}</p>
+  </div>
+  ${p.stories.map(s => story(s, ++n)).join("")}`).join("");
+
+/* ---------- controls ---------- */
+const bp = document.getElementById("btn-pinyin");
+const be = document.getElementById("btn-en");
+bp.onclick = () => {
+  const off = document.body.classList.toggle("no-pinyin");
+  bp.textContent = off ? "Pinyin: off" : "Pinyin: on";
+  bp.classList.toggle("on", !off);
+};
+be.onclick = () => {
+  const off = document.body.classList.toggle("no-en");
+  be.textContent = off ? "English: off" : "English: on";
+  be.classList.toggle("on", !off);
+};
+document.getElementById("btn-print").onclick = () => window.print();
+</script>
+</body>
+</html>
