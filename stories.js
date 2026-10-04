@@ -406,5 +406,180 @@ const PARTS = [
   ]
 }
   ]
+},
+{
+  title: "Just chatting",
+  sub: "Catching up with someone your age. Pure small talk, zero agenda.",
+  stories: [
+{
+  t: "最近咋样", tp: "zuì jìn zǎ yàng", te: "Catching up",
+  scene: "Running into an old friend. The first five minutes are always the same — and that's the point.",
+  lines: [
+    ["friend", "哎|āi/!|/好久|hǎo jiǔ/不|bú/见|jiàn/啊|a/!|", "Hey! Long time no see!"],
+    ["you", "是|shì/啊|a/,|/最|zuì/近|jìn/咋样|zǎ yàng/?|", "Right? How've you been?"],
+    ["friend", "老|lǎo/样|yàng/子|zi/,|/上|shàng/班|bān/摸|mō/鱼|yú/。|", "Same old. Working and slacking off."],
+    ["you", "哈哈|hā hā/,|/你|nǐ/们|men/公|gōng/司|sī/还|hái/招|zhāo/人|rén/吗|ma/?|", "Haha. Is your company still hiring?"],
+    ["friend", "招|zhāo/啊|a/,|/你|nǐ/要|yào/来|lái/?|", "Yeah — you wanna come?"],
+    ["you", "算|suàn/了|le/吧|ba/,|/我|wǒ/现|xiàn/在|zài/这|zhè/边|biān/挺|tǐng/好|hǎo/的|de/。|", "Nah, I'm good where I am."],
+    ["friend", "行|xíng/,|/周|zhōu/末|mò/出|chū/来|lai/喝|hē/点|diǎnr/啊|a/?|", "Alright. Grab a drink this weekend?"],
+    ["you", "可|kě/以|yǐ/啊|a/,|/周|zhōu/六|liù/晚|wǎn/上|shang/怎|zěn/么|me/样|yàng/?|", "Sure — Saturday night work?"],
+    ["friend", "没|méi/问|wèn/题|tí/。|/到|dào/时|shí/候|hou/我|wǒ/发|fā/你|nǐ/定|dìng/位|wèi/。|", "No problem. I'll send you the location when it's time."]
+  ],
+  notes: [
+    ["咋样", "zǎ yàng", "\"How's it going.\" Northern and casual; southerners tend to say 怎么样."],
+    ["老样子", "lǎo yàng zi", "\"Same old.\" The default answer to 最近咋样 — use it freely."],
+    ["摸鱼", "mō yú", "\"Slacking off at work.\" Literally \"touching fish.\" Huge among young workers."],
+    ["算了吧", "suàn le ba", "\"Nah / forget it.\" A soft, friendly no."],
+    ["到时候", "dào shí hou", "\"When the time comes.\" The standard way to keep plans loose."]
+  ]
+}
+  ]
+},
+{
+  title: "Out and about",
+  sub: "Taxi drivers, restaurant owners, strangers on the street. Real-world reps, both sides of the dialogue.",
+  stories: [
+{
+  t: "打车", tp: "dǎ chē", te: "Chatting with the taxi driver",
+  scene: "You get in the cab. The driver wants to talk. Let him — this is free speaking practice.",
+  lines: [
+    ["you", "师|shī/傅|fu/,|/去|qù/三|sān/里|lǐ/屯|tún/。|", "师傅, to Sanlitun."],
+    ["driver", "好|hǎo/嘞|lei/!|/你|nǐ/是|shì/外|wài/地|dì/来|lái/玩|wán/的|de/吧|ba/?|", "You got it! Visiting from out of town?"],
+    ["you", "对|duì/,|/过|guò/来|lai/找|zhǎo/朋|péng/友|you/玩|wán/。|", "Yeah, visiting a friend."],
+    ["driver", "待|dāi/几|jǐ/天|tiān/啊|a/?|", "How long you staying?"],
+    ["you", "一|yí/个|ge/星|xīng/期|qī/吧|ba/。|/这|zhè/边|biān/有|yǒu/什|shén/么|me/好|hǎo/吃|chī/的|de/推|tuī/荐|jiàn/吗|ma/?|", "About a week. Any good food around here you'd recommend?"],
+    ["driver", "那|nà/可|kě/多|duō/了|le/!|/簋|guǐ/街|jiē/知|zhī/道|dào/吗|ma/?|/小|xiǎo/龙|lóng/虾|xiā/绝|jué/了|le/。|", "Tons! You know Guijie? The crawfish there is amazing."],
+    ["you", "行|xíng/,|/我|wǒ/记|jì/下|xià/来|lai/。|/师|shī/傅|fu/你|nǐ/开|kāi/了|le/多|duō/久|jiǔ/了|le/?|", "Noted. How long have you been driving?"],
+    ["driver", "十|shí/来|lái/年|nián/了|le/。|/北|běi/京|jīng/哪|nǎr/我|wǒ/都|dōu/熟|shú/。|", "Ten-plus years. I know Beijing like the back of my hand."],
+    ["you", "那|nà/以|yǐ/后|hòu/打|dǎ/车|chē/就|jiù/找|zhǎo/你|nǐ/了|le/。|", "I'll look for you next time I need a cab."],
+    ["driver", "哈哈|hā hā/,|/到|dào/了|le/,|/扫|sǎo/这|zhè/个|ge/就|jiù/行|xíng/。|", "Haha. We're here — just scan this one."]
+  ],
+  notes: [
+    ["师傅", "shī fu", "What you call taxi drivers and skilled workers. Never 司机 to their face."],
+    ["好嘞", "hǎo lei", "\"You got it!\" The classic northern driver reply. Say it back and you sound local."],
+    ["绝了", "jué le", "\"Amazing / top-tier.\" 绝 = the absolute best."],
+    ["哪儿我都熟", "nǎr wǒ dōu shú", "\"I know everywhere.\" 熟 = to know a place well."]
+  ]
+},
+{
+  t: "下馆子", tp: "xià guǎn zi", te: "Ordering at a local restaurant",
+  scene: "A small, busy restaurant. The owner takes your order himself — talk to him, not just the menu.",
+  lines: [
+    ["owner", "几|jǐ/位|wèi/?|", "How many?"],
+    ["you", "两|liǎng/位|wèi/。|", "Two."],
+    ["owner", "里|lǐ/边|bian/坐|zuò/,|/扫|sǎo/码|mǎ/点|diǎn/单|dān/。|", "Sit inside, scan the code to order."],
+    ["you", "老|lǎo/板|bǎn/,|/你|nǐ/们|men/家|jiā/什|shén/么|me/菜|cài/最|zuì/火|huǒ/?|", "Boss, what's the most popular dish here?"],
+    ["owner", "糖|táng/醋|cù/里|lǐ/脊|ji/,|/来|lái/的|de/客|kè/人|rén/都|dōu/点|diǎn/。|", "Sweet and sour pork. Everyone orders it."],
+    ["you", "那|nà/来|lái/一|yí/份|fèn/。|/再|zài/来|lái/个|ge/西|xī/红|hóng/柿|shì/炒|chǎo/鸡|jī/蛋|dàn/吧|ba/。|", "One of those then. And a tomato scrambled eggs."],
+    ["owner", "米|mǐ/饭|fàn/要|yào/吗|ma/?|", "Rice?"],
+    ["you", "要|yào/,|/两|liǎng/碗|wǎn/。|/对|duì/了|le/,|/里|lǐ/脊|ji/能|néng/不|bú/那|nà/么|me/甜|tián/吗|ma/?|", "Yes, two bowls. Oh — can the pork be a bit less sweet?"],
+    ["owner", "行|xíng/,|/我|wǒ/跟|gēn/厨|chú/房|fáng/说|shuō/一|yì/声|shēng/。|", "Sure, I'll tell the kitchen."],
+    ["you", "谢|xiè/谢|xie/老|lǎo/板|bǎn/!|", "Thanks, boss!"]
+  ],
+  notes: [
+    ["老板", "lǎo bǎn", "\"Boss.\" What you call the owner or person in charge. Friendly, not formal."],
+    ["下馆子", "xià guǎn zi", "\"Eating out at a restaurant.\" Way more natural than 去餐厅."],
+    ["来一份", "lái yí fèn", "\"I'll have one.\" 来 + dish is the natural way to order."],
+    ["说一声", "shuō yì shēng", "\"Mention it / give a heads-up.\" 跟厨房说一声 = tell the kitchen."]
+  ]
+},
+{
+  t: "问路", tp: "wèn lù", te: "Asking for directions",
+  scene: "Your phone died. A lady walking her dog is your only map. Be nice.",
+  lines: [
+    ["you", "阿|ā/姨|yí/,|/打|dǎ/扰|rǎo/一|yí/下|xià/,|/地|dì/铁|tiě/站|zhàn/怎|zěn/么|me/走|zǒu/?|", "Auntie, sorry to bother you — how do I get to the subway station?"],
+    ["auntie", "往|wǎng/前|qián/走|zǒu/,|/第|dì/二|èr/个|ge/路|lù/口|kǒu/右|yòu/转|zhuǎn/就|jiù/到|dào/了|le/。|", "Go straight, second intersection, turn right and you're there."],
+    ["you", "远|yuǎn/吗|ma/?|/走|zǒu/过|guò/去|qù/得|děi/多|duō/久|jiǔ/?|", "Is it far? How long on foot?"],
+    ["auntie", "不|bù/远|yuǎn/,|/五|wǔ/分|fēn/钟|zhōng/吧|ba/。|", "Not far, five minutes or so."],
+    ["you", "好|hǎo/的|de/,|/谢|xiè/谢|xie/阿|ā/姨|yí/!|", "Got it — thanks, auntie!"]
+  ],
+  notes: [
+    ["打扰一下", "dǎ rǎo yí xià", "\"Sorry to bother you.\" The natural opener with strangers."],
+    ["阿姨", "ā yí", "\"Auntie.\" The default address for middle-aged women you don't know. Warmer than 女士."],
+    ["怎么走", "zěn me zǒu", "\"How do I get there.\" The phrase for asking directions."],
+    ["往前走", "wǎng qián zǒu", "\"Go straight.\" 往 + direction is the pattern: 往左, 往右."]
+  ]
+}
+  ]
+},
+{
+  title: "With relatives",
+  sub: "Family dinners and video calls. Your actual life — work, Helen, school, weekends — in casual Mandarin.",
+  stories: [
+{
+  t: "你是做啥的", tp: "nǐ shì zuò shá de", te: "Explaining your job to your uncle",
+  scene: "Family dinner. Your uncle wants to know what you actually do all day.",
+  lines: [
+    ["uncle", "你|nǐ/现|xiàn/在|zài/做|zuò/什|shén/么|me/工|gōng/作|zuò/呢|ne/?|", "What are you doing for work these days?"],
+    ["you", "我|wǒ/在|zài/一|yì/家|jiā/金|jīn/融|róng/公|gōng/司|sī/做|zuò/数|shù/据|jù/,|/岗|gǎng/位|wèi/叫|jiào/数|shù/据|jù/科|kē/学|xué/家|jiā/。|", "I do data at a finance company — the title is data scientist."],
+    ["uncle", "数|shù/据|jù/科|kē/学|xué/家|jiā/?|/听|tīng/起|qǐ/来|lai/挺|tǐng/高|gāo/大|dà/上|shàng/的|de/。|", "Data scientist? Sounds fancy."],
+    ["you", "哈哈|hā hā/,|/其|qí/实|shí/就|jiù/是|shì/每|měi/天|tiān/跟|gēn/数|shù/据|jù/打|dǎ/交|jiāo/道|dào/,|/写|xiě/写|xie/代|dài/码|mǎ/。|", "Haha, really it's just dealing with data every day, writing code."],
+    ["uncle", "工|gōng/资|zī/怎|zěn/么|me/样|yàng/?|/在|zài/多|duō/伦|lún/多|duō/买|mǎi/房|fáng/够|gòu/吗|ma/?|", "How's the pay? Enough to buy a place in Toronto?"],
+    ["you", "还|hái/行|xíng/吧|ba/,|/正|zhèng/常|cháng/过|guò/日|rì/子|zi/没|méi/问|wèn/题|tí/。|/买|mǎi/房|fáng/还|hái/早|zǎo/呢|ne/。|", "It's fine, comfortable enough day to day. Buying a place is still a ways off."],
+    ["uncle", "慢|màn/慢|man/来|lái/,|/你|nǐ/们|men/年|nián/轻|qīng/人|rén/有|yǒu/的|de/是|shì/时|shí/间|jiān/。|", "Take your time. You young people have time on your side."]
+  ],
+  notes: [
+    ["做数据的", "zuò shù jù de", "\"I do data.\" The casual way to say you work in data."],
+    ["高大上", "gāo dà shàng", "\"Fancy / high-end.\" Short for 高端大气上档次. Relatives love this word."],
+    ["打交道", "dǎ jiāo dào", "\"To deal with.\" 跟数据打交道 = work with data all day."],
+    ["买房", "mǎi fáng", "\"Buy a place.\" The question every Chinese relative eventually asks."]
+  ]
+},
+{
+  t: "我女朋友", tp: "wǒ nǚ péng you", te: "Telling grandma about Helen",
+  scene: "Video call with grandma. She has one question and you know exactly what it is.",
+  lines: [
+    ["grandma", "有|yǒu/女|nǚ/朋|péng/友|you/了|le/吗|ma/?|", "Do you have a girlfriend?"],
+    ["you", "有|yǒu/了|le/有|yǒu/了|le/。|/她|tā/叫|jiào/Helen|。|", "Yes, yes. Her name's Helen."],
+    ["grandma", "哪|nǎr/人|rén/啊|a/?|", "Where's she from?"],
+    ["you", "她|tā/是|shì/越|yuè/南|nán/人|rén/,|/但|dàn/从|cóng/小|xiǎo/在|zài/这|zhè/边|biān/长|zhǎng/大|dà/的|de/。|", "She's Vietnamese, but she grew up here."],
+    ["grandma", "做|zuò/什|shén/么|me/的|de/啊|a/?|", "What does she do?"],
+    ["you", "她|tā/做|zuò/销|xiāo/售|shòu/的|de/,|/卖|mài/太|tài/阳|yáng/能|néng/板|bǎn/。|/公|gōng/司|sī/在|zài/加|jiā/州|zhōu/,|/她|tā/在|zài/家|jiā/远|yuǎn/程|chéng/上|shàng/班|bān/。|", "She's in sales — solar panels. The company's in California, she works from home."],
+    ["grandma", "什|shén/么|me/时|shí/候|hou/带|dài/回|huí/来|lai/让|ràng/我|wǒ/见|jiàn/见|jian/?|", "When are you bringing her home so I can meet her?"],
+    ["you", "有|yǒu/机|jī/会|huì/肯|kěn/定|dìng/啊|a/!|", "Definitely, when we get the chance!"]
+  ],
+  notes: [
+    ["越南", "yuè nán", "Vietnam. 越南人 = a Vietnamese person."],
+    ["太阳能板", "tài yáng néng bǎn", "Solar panels. 太阳能 = solar energy."],
+    ["远程上班", "yuǎn chéng shàng bān", "\"Working remotely.\" 在家上班 (work from home) is just as common."],
+    ["带回来", "dài huí lai", "\"Bring home to meet the family.\" The milestone verb for introducing a partner."]
+  ]
+},
+{
+  t: "读的啥专业", tp: "dú de shá zhuān yè", te: "Explaining your degrees",
+  scene: "Same dinner. Your uncle's friend wants the full education rundown.",
+  lines: [
+    ["auntie", "你|nǐ/在|zài/哪|nǎr/读|dú/的|de/书|shū/啊|a/?|", "Where did you go to school?"],
+    ["you", "本|běn/科|kē/读|dú/的|de/健|jiàn/康|kāng/方|fāng/面|miàn/的|de/,|/硕|shuò/士|shì/在|zài/滑|huá/铁|tiě/卢|lú/读|dú/的|de/工|gōng/程|chéng/。|", "My bachelor's was in health, and I did my master's in engineering at Waterloo."],
+    ["auntie", "滑|huá/铁|tiě/卢|lú/不|bú/错|cuò/啊|a/!|/工|gōng/程|chéng/读|dú/出|chū/来|lai/好|hǎo/找|zhǎo/工|gōng/作|zuò/。|", "Waterloo's great! Engineering grads find jobs easily."],
+    ["you", "还|hái/行|xíng/吧|ba/。|/其|qí/实|shí/我|wǒ/本|běn/科|kē/跟|gēn/现|xiàn/在|zài/做|zuò/的|de/也|yě/不|bù/太|tài/一|yí/样|yàng/,|/都|dōu/是|shì/后|hòu/来|lái/自|zì/己|jǐ/学|xué/的|de/。|", "It's alright. Honestly my bachelor's isn't really related to what I do now — I picked most of it up myself."],
+    ["auntie", "那|nà/你|nǐ/还|hái/挺|tǐng/能|néng/折|zhē/腾|teng/的|de/。|", "Well, you're resourceful then."]
+  ],
+  notes: [
+    ["滑铁卢", "huá tiě lú", "University of Waterloo. Students just call it 滑大 (huá dà)."],
+    ["本科 / 硕士", "běn kē / shuò shì", "Bachelor's / master's degree. 博士 (bó shì) is PhD."],
+    ["读出来", "dú chū lai", "\"To graduate and come out the other side.\" 读出来好找工作."],
+    ["折腾", "zhē teng", "\"To hustle / throw yourself into things.\" 能折腾 = resourceful, makes things happen."]
+  ]
+},
+{
+  t: "平时玩啥", tp: "píng shí wán shá", te: "What you do for fun",
+  scene: "Chilling with your cousin. He wants to know what you do when you're not working.",
+  lines: [
+    ["cousin", "你|nǐ/平|píng/时|shí/下|xià/班|bān/都|dōu/干|gàn/啥|shá/啊|a/?|", "What do you do after work?"],
+    ["you", "打|dǎ/排|pái/球|qiú/啊|a/!|/我|wǒ/每|měi/周|zhōu/都|dōu/训|xùn/练|liàn/,|/还|hái/参|cān/加|jiā/了|le/个|ge/联|lián/赛|sài/。|", "Volleyball! I train every week and I'm in a league."],
+    ["cousin", "可|kě/以|yǐ/啊|a/!|/你|nǐ/还|hái/拍|pāi/视|shì/频|pín/是|shì/吧|ba/?|", "Nice! And you make videos too, right?"],
+    ["you", "对|duì/,|/做|zuò/点|diǎnr/投|tóu/资|zī/方|fāng/面|miàn/的|de/短|duǎn/视|shì/频|pín/,|/一|yì/周|zhōu/发|fā/好|hǎo/几|jǐ/条|tiáo/。|", "Yeah — short videos about investing. I post several a week."],
+    ["cousin", "你|nǐ/这|zhè/业|yè/余|yú/生|shēng/活|huó/比|bǐ/上|shàng/班|bān/还|hái/忙|máng/。|", "Your free time sounds busier than work."],
+    ["you", "哈哈|hā hā/哈|hā/,|/瞎|xiā/忙|máng/呗|bei/。|", "Haha, just keeping myself busy."]
+  ],
+  notes: [
+    ["联赛", "lián sài", "A league. 参加联赛 = to play in a league."],
+    ["短视频", "duǎn shì pín", "Short-form video — TikTok, Reels, Shorts."],
+    ["业余生活", "yè yú shēng huó", "Life outside work. 业余 = spare time / amateur."],
+    ["瞎忙", "xiā máng", "\"Busy with random stuff.\" Self-deprecating and very casual."]
+  ]
+}
+  ]
 }
 ];
