@@ -198,11 +198,16 @@
   }
 
   /* ---------- parts + contents ---------- */
-  .contents { margin: 0 0 36px; font-size: 15px; }
-  .contents a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
-  .contents a:hover { border-color: var(--ink); }
-  .contents ol { margin: 6px 0 0; padding-left: 0; list-style: none; }
-  .contents li { margin: 6px 0; }
+  .contents { margin: 0 0 36px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .contents a.tab {
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .contents a.tab:hover { opacity: 0.75; }
   .contents .count { color: var(--faint); font-size: 13px; margin-left: 6px; }
   .part-head { margin: 64px 0 36px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); scroll-margin-top: 70px; }
   .part-head:first-child { margin-top: 0; }
@@ -294,9 +299,9 @@ function story(s, n) {
 
 let n = 0;
 const contents = `
-  <nav class="contents"><ol>
-    ${PARTS.map((p, i) => `<li><a href="#part-${i + 1}">Part ${i + 1}: ${p.title}</a><span class="count">${p.stories.length} stories</span></li>`).join("")}
-  </ol></nav>`;
+  <nav class="contents">
+    ${PARTS.map((p, i) => `<a class="tab" href="#part-${i + 1}">Part ${i + 1}: ${p.title}<span class="count">${p.stories.length}</span></a>`).join("")}
+  </nav>`;
 
 document.getElementById("out").innerHTML = contents + PARTS.map((p, i) => `
   <div class="part-head" id="part-${i + 1}">
