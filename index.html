@@ -125,11 +125,28 @@
   /* ---------- dialogue ---------- */
   .line {
     display: grid;
-    grid-template-columns: 62px 1fr;
+    grid-template-columns: 62px 1fr 34px;
     gap: 14px;
     margin-bottom: 12px;
     align-items: start;
   }
+  .speak {
+    font: inherit;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--ink);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+  }
+  .speak:hover { opacity: 0.75; }
+  .speak.playing { background: var(--ink); color: var(--paper); }
   .who {
     font-family: system-ui, sans-serif;
     font-size: 12px;
@@ -220,7 +237,7 @@
   /* ---------- print ---------- */
   @media print {
     body { background: #fff; padding: 0; font-size: 12pt; }
-    .controls, .howto, .contents { display: none !important; }
+    .controls, .howto, .contents, .speak { display: none !important; }
     .story { page-break-after: always; margin-bottom: 0; }
     .story:last-of-type { page-break-after: auto; }
     .line { page-break-inside: avoid; }
@@ -271,6 +288,26 @@ function ruby(spec) {
   }).join("");
 }
 
+function plainZh(spec) {
+  return spec.split("/").map(tok => {
+    const i = tok.indexOf("|");
+    return i === -1 ? tok : tok.slice(0, i);
+  }).join("");
+}
+
+function say(btn) {
+  try {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(plainZh(btn.getAttribute("data-spec")));
+    u.lang = "zh-CN";
+    u.rate = 0.9;
+    document.querySelectorAll(".speak.playing").forEach(b => b.classList.remove("playing"));
+    btn.classList.add("playing");
+    u.onend = u.onerror = () => btn.classList.remove("playing");
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+
 function story(s, n) {
   return `
   <section class="story">
@@ -287,6 +324,7 @@ function story(s, n) {
           <div class="zh">${ruby(spec)}</div>
           <div class="en">${en}</div>
         </div>
+        <button class="speak" data-spec="${spec.replace(/"/g, "&quot;")}" onclick="say(this)" aria-label="Hear this line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg></button>
       </div>`).join("")}
     <div class="notes">
       <h3>Stuff a textbook won't tell you</h3>
